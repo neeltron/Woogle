@@ -13,6 +13,8 @@ socketio = SocketIO(app)
 # Index page and Rendering Basic Templates
 @app.route('/', methods= ["GET", "POST"])
 def index():
+  for i in db:
+    print(db[i])
   return render_template('index.html')
 
 
@@ -27,6 +29,7 @@ def push():
     lst = [i1, i2, i3]
     db[user] = lst
     print(user, i1, i2, i3)
+    return redirect("https://woogle.neeltron.repl.co")
 
 
 
