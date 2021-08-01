@@ -321,6 +321,19 @@
         font-weight: 500;
         display: none;
       }
+      #speeddate {
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        background: #FFFFFF;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        height: 70%;
+        width: 80%;
+        display: none;
+      }
     </style>
     <script>
       function switch0() {
@@ -339,6 +352,7 @@
         document.getElementById('chatdiv').style.display = 'none';
         document.getElementById('chattf').style.display = 'none';
         document.getElementById('chatbtn').style.display = 'none';
+        document.getElementById('speeddate').style.display = 'none';
       }
       function switch1() {
         document.getElementById('menutexthighlight2').style.color = '#FB6D3A';
@@ -356,6 +370,7 @@
         document.getElementById('chatdiv').style.display = 'block';
         document.getElementById('chattf').style.display = 'block';
         document.getElementById('chatbtn').style.display = 'block';
+        document.getElementById('speeddate').style.display = 'none';
       }
       function switch2() {
         document.getElementById('menutexthighlight2').style.color = '#FFFFFF';
@@ -375,6 +390,7 @@
         document.getElementById('chattf').style.display = 'none';
         document.getElementById('chatbtn').style.display = 'none';
         document.getElementById('menutexthighlight3').style.color = '#FB6D3A';
+        document.getElementById('speeddate').style.display = 'block';
       }
     </script>
   </head>
@@ -439,6 +455,13 @@
       <form id="form" action="" method="POST">
       <input id = "chattf" placeholder="Message" class = "message"/>
       <button id = "chatbtn">Send</button>
+      <div id="speeddate">
+        {% for i in obj: %}
+        {% if obj[i]!= "": %}
+        <a href = https://quicksesh.co/join?title={{ obj[i] }}><p value="{{i}}"></a>
+        {% endif %}
+        {% endfor %}
+        </div>
       </form>
       <form method = "POST" action = "{{url_for("push")}}">
       <input id = "tf1" placeholder = "John Doe" class = "username" name = "title" />

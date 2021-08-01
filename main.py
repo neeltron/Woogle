@@ -15,7 +15,7 @@ socketio = SocketIO(app)
 def index():
   for i in db:
     print(db[i])
-  return render_template('index.html')
+  return render_template('index.html', obj = db)
 
 
 @app.route('/push', methods= ["GET", "POST"])
