@@ -44,6 +44,16 @@
         box-shadow: 0px 4px 48px rgba(0, 0, 0, 0.02);
         border-radius: 25px;
       }
+      #menuicon4 {
+        position: absolute;
+        width: 344px;
+        height: 8%;
+        left: 98px;
+        top: 50%;
+        background: #503E9D;
+        box-shadow: 0px 4px 48px rgba(0, 0, 0, 0.02);
+        border-radius: 25px;
+      }
       #menutexthighlight {
         position: absolute;
         left: 10%;
@@ -183,9 +193,9 @@
       #bugdiv {
         position: absolute;
         width: 236px;
-        height: 300px;
+        height: 280px;
         left: 98px;
-        top: 50%;
+        top: 60%;
         background: #5543A5;
         border-radius: 32px;
       }
@@ -249,6 +259,16 @@
         font-weight: 500;
       }
     </style>
+    <script>
+      function switch1() {
+        document.getElementById('tf1').style.display = 'none';
+        document.getElementById('tf2').style.display = 'none';
+        document.getElementById('tf3').style.display = 'none';
+        document.getElementById('tf4').style.display = 'none';
+        document.getElementById('drop1').style.display = 'none';
+        document.getElementById('drop2').style.display = 'none';
+      }
+    </script>
   </head>
   <body bgcolor = "#503E9D">
     <div id = "header">
@@ -266,11 +286,14 @@
     <div id = "menuicon1">
       <p id = "menutexthighlight">Profile</p>
     </div>
-    <div id = "menuicon2">
+    <div id = "menuicon2" onclick="switch1()">
       <p id = "menutexthighlight2">Messages</p>
     </div>
     <div id = "menuicon3">
       <p id = "menutexthighlight2">Speed Date!</p>
+    </div>
+    <div id = "menuicon4">
+      <p id = "menutexthighlight2">Date a Blahaj</p>
     </div>
     <div id = "main">
       <div id = "subhead">Your Profile & Preferences</div>
