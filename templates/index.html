@@ -395,7 +395,7 @@
           socket.emit( 'my event', {
             data: 'User Connected'
           } )
-          var form = $( 'form' ).on( 'submit', function( e ) {
+          var form = $( '#form' ).on( 'submit', function( e ) {
             e.preventDefault()
             let user_name = $( 'input.username' ).val()
             let user_input = $( 'input.message' ).val()
@@ -415,12 +415,12 @@
         })
       </script>
       <div id = "chatdiv" class = "message_holder"></div>
-      <form action="" method="POST">
+      <form id="form" action="" method="POST">
       <input id = "chattf" placeholder="Message" class = "message"/>
       <button id = "chatbtn">Send</button>
       </form>
-      <form method = "POST" action = "{{ url_for("push")}}">
-      <input id = "tf1" placeholder = "John Doe" class = "username" name = "name"/>
+      <form method = "POST" action = "{{url_for("push")}}">
+      <input id = "tf1" placeholder = "John Doe" class = "username" name = "title" />
       <input id = "tf2" placeholder = "Interest 1" name = "i1" />
       <input id = "tf3" placeholder = "Interest 2" name = "i2" />
       <input id = "tf4" placeholder = "Interest 3" name = "i3" />

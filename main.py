@@ -19,7 +19,8 @@ def index():
 @app.route('/push', methods= ["GET", "POST"])
 def push():
   if request.method == "POST":
-    user = request.form.get('name')
+    print("here")
+    user = request.form.get('title')
     i1 = request.form.get('i1')
     i2 = request.form.get('i2')
     i3 = request.form.get('i3')
