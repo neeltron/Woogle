@@ -280,8 +280,50 @@
         font-style: normal;
         font-weight: 500;
       }
+      #chatdiv {
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        background: #FFFF00;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        height: 70%;
+        width: 80%;
+        display: none;
+      }
+      #chattf {
+        position: absolute;
+        width: 424px;
+        height: 40px;
+        left: 5%;
+        top: 88%;
+        background: #F6F6F5;
+        border-radius: 10px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        display: none;
+      }
     </style>
     <script>
+      function switch0() {
+        document.getElementById('menutexthighlight').style.color = '#FB6D3A';
+        document.getElementById('tf1').style.display = 'block';
+        document.getElementById('tf2').style.display = 'block';
+        document.getElementById('tf3').style.display = 'block';
+        document.getElementById('tf4').style.display = 'block';
+        document.getElementById('drop1').style.display = 'block';
+        document.getElementById('drop2').style.display = 'block';
+        document.getElementById('menuicon1').style.background = '#FFFFFF';
+        document.getElementById('menutexthighlight2').style.color = '#FFFFFF';
+        document.getElementById('save').style.display = 'block';
+        document.getElementById('menuicon2').style.background = '#503E9D';
+        document.getElementById('subhead').innerHTML = 'Your Profile & Preferences';
+        document.getElementById('chatdiv').style.display = 'none';
+      }
       function switch1() {
         document.getElementById('menutexthighlight2').style.color = '#FB6D3A';
         document.getElementById('tf1').style.display = 'none';
@@ -295,6 +337,7 @@
         document.getElementById('save').style.display = 'none';
         document.getElementById('menuicon2').style.background = '#FFFFFF';
         document.getElementById('subhead').innerHTML = 'Global Chat';
+        document.getElementById('chatdiv').style.display = 'block';
       }
     </script>
   </head>
@@ -311,7 +354,7 @@
         <button id="reportbutton">Report it here!</button>
       <img src="static/bug.png" id = "bugimg"/>
     </div>
-    <div id = "menuicon1">
+    <div id = "menuicon1" onclick="switch0()">
       <p id = "menutexthighlight">Profile</p>
     </div>
     <div id = "menuicon2" onclick="switch1()">
@@ -325,6 +368,8 @@
     </div>
     <div id = "main">
       <div id = "subhead">Your Profile & Preferences</div>
+      <div id = "chatdiv"></div>
+      <input id = "chattf" placeholder="Message" />
       <input id = "tf1" placeholder = "John Doe" />
       <input id = "tf2" placeholder = "Interest 1" />
       <input id = "tf3" placeholder = "Interest 2" />
