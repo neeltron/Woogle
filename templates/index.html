@@ -85,7 +85,29 @@
         font-size: 18px;
         line-height: 27px;
         display: flex;
-        color: #FB6D3A;
+        color: #FFFFFF;
+      }
+      #menutexthighlight4 {
+        position: absolute;
+        left: 10%;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        display: flex;
+        color: #FFFFFF;
+      }
+      #menutexthighlight5 {
+        position: absolute;
+        left: 10%;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        display: flex;
+        color: #FFFFFF;
       }
       #header {
         position: absolute;
@@ -261,12 +283,18 @@
     </style>
     <script>
       function switch1() {
+        document.getElementById('menutexthighlight2').style.color = '#FB6D3A';
         document.getElementById('tf1').style.display = 'none';
         document.getElementById('tf2').style.display = 'none';
         document.getElementById('tf3').style.display = 'none';
         document.getElementById('tf4').style.display = 'none';
         document.getElementById('drop1').style.display = 'none';
         document.getElementById('drop2').style.display = 'none';
+        document.getElementById('menuicon1').style.background = '#503E9D';
+        document.getElementById('menutexthighlight').style.color = '#FFFFFF';
+        document.getElementById('save').style.display = 'none';
+        document.getElementById('menuicon2').style.background = '#FFFFFF';
+        
       }
     </script>
   </head>
@@ -278,7 +306,7 @@
       <div id = "headertext">Woogle</div>
     </div>
     <div id = "bugdiv">
-      <p id="menutexthighlight2">
+      <p id="menutexthighlight5">
         Found a bug?</p>
         <button id="reportbutton">Report it here!</button>
       <img src="static/bug.png" id = "bugimg"/>
@@ -290,10 +318,10 @@
       <p id = "menutexthighlight2">Messages</p>
     </div>
     <div id = "menuicon3">
-      <p id = "menutexthighlight2">Speed Date!</p>
+      <p id = "menutexthighlight3">Speed Date!</p>
     </div>
     <div id = "menuicon4">
-      <p id = "menutexthighlight2">Date a Blahaj</p>
+      <p id = "menutexthighlight4">Date a Blahaj</p>
     </div>
     <div id = "main">
       <div id = "subhead">Your Profile & Preferences</div>
