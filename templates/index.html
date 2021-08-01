@@ -403,7 +403,7 @@
               user_name : user_name,
               message : user_input
             } )
-            $( 'input.message' ).val( '' ).focus()
+            $( 'input.message' ).val('').focus()
           } )
         } )
         socket.on( 'my response', function( msg ) {
@@ -417,13 +417,14 @@
       <div id = "chatdiv" class = "message_holder"></div>
       <form action="" method="POST">
       <input id = "chattf" placeholder="Message" class = "message"/>
-      </form>
       <button id = "chatbtn">Send</button>
-      <input id = "tf1" placeholder = "John Doe" class = "username"/>
-      <input id = "tf2" placeholder = "Interest 1" />
-      <input id = "tf3" placeholder = "Interest 2" />
-      <input id = "tf4" placeholder = "Interest 3" />
-      <select name="gender" id="drop1">
+      </form>
+      <form method = "POST" action = "{{ url_for("push")}}">
+      <input id = "tf1" placeholder = "John Doe" class = "username" name = "name"/>
+      <input id = "tf2" placeholder = "Interest 1" name = "i1" />
+      <input id = "tf3" placeholder = "Interest 2" name = "i2" />
+      <input id = "tf4" placeholder = "Interest 3" name = "i3" />
+      <select name="gender" id="drop1" name = "gender">
         <option value="n">Select your Gender</option>
         <option value="f">Female</option>
         <option value="m">Male</option>
@@ -433,7 +434,7 @@
         <option value="p">Personal</option>
         <option value="e">Eunuch</option>
       </select>
-      <select name="gender2" id="drop2">
+      <select name="gender2" id="drop2" name = "preference">
         <option value="n">Select Gender Preference</option>
         <option value="f">Female</option>
         <option value="m">Male</option>
@@ -444,6 +445,7 @@
         <option value="e">Eunuch</option>
       </select>
       <button id = "save">Save</button>
+      </form>
     </div>
   </body>
 </html>
